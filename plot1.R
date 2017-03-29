@@ -7,6 +7,7 @@
 if(!exists("dataNEI")){
         dataNEI <- readRDS("./data/summarySCC_PM25.rds")
 }
+
 if(!exists("dataSCC")){
         dataSCC <- readRDS("./data/Source_Classification_Code.rds")
 }
