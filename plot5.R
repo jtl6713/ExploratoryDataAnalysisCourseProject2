@@ -11,7 +11,7 @@ if(!exists("dataSCC")){
         dataSCC <- readRDS("./data/Source_Classification_Code.rds")
 }
 
-# How have emissions from motor vehicle sources changed from 1999-2008 in subsetBaltimore City?
+# How have emissions from motor vehicle sources changed from 1999-2008 in Baltimore City?
 
 # Requirement > ggplot2
 library(ggplot2)
@@ -26,14 +26,15 @@ emissionSource <- dataSCC[grepl("Vehicle", dataSCC$EI.Sector),]
 baltimoreVehicleEmissions <- subset(subsetBaltimore, subsetBaltimore$SCC %in% emissionSource$SCC)
 
 png("plot5.png", width=840, height=480)
-g <- ggplot(baltimoreVehicleEmissions, aes(factor(year), Emissions))
+thePlot <- ggplot(baltimoreVehicleEmissions, aes(factor(year), Emissions))
 
 # Will use qplot here
-g <- g + geom_bar(stat="identity") + xlab("year") +
+thePlot <- thePlot + geom_bar(stat="identity") + xlab("year") +
         ylab(expression("PM2.5 Emissions")) +
         ggtitle('Baltimore Vehicle Emissions from 1999 - 2008')
 
-print(g)
+# Print it to the device
+print(thePlot)
 
 dev.off()
 
