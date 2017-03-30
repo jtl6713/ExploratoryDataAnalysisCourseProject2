@@ -1,4 +1,4 @@
-# Name: plot2.R
+# Name: plot3.R
 # Author: Joe Logan
 # Date 29-March 2017
 # Assignment: Exploratory Data Analysis - Course Project
