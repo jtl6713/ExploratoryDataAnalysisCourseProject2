@@ -32,6 +32,6 @@ png('plot3.png')
 # Will use qplot here
 qplot(year, Emissions, data = baltimoreEmissionsByYear, group = baltimoreEmissionsByYear$type, color = baltimoreEmissionsByYear$type, 
       geom = c("point", "line"), ylab = expression("PM2.5 Emissions"), 
-      xlab = "Year", main = "Total Emissions in Baltimore by Pollutant Type")
+      xlab = "Year", main = "Emissions in Baltimore by Pollutant Type")
 
 dev.off()
